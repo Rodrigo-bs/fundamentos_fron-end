@@ -32,11 +32,82 @@
     </nav>
 
     <main id="content">
+        <form action="#" method="get">
+            <input type="hidden" name="id" value="1">
+            <label for="usuario_nomeCompleto">Nome</label>
+            <input type="text" name="usuario.nome_completo" id="usuario_nomecompleto" placeholder="Nome Completo">
+            <label for="usuario_nomeUsuario">Usuário</label>
+            <input type="text" name="usuario.nome_usuario" id="usuario_nomeUsuario" placeholder="Usuário" required>
+            <label for="usuario_senha">Senha</label>
+            <input type="password" name="usuario.senha" id="usuario_senha" placeholder="********">
+            <label for="usuario_ativo">Ativo</label>
+            <input type="checkbox" name="usuario.ativo" id="usuario_ativo">
+            <label for="usuario_papel">Papel</label>
+            <select name="usuario.papel" id="usuario_papel" required>
+                <option value="" disabled selected>Selecione uma opção</option>
+                <option value="USUARIO">USUARIO</option>
+                <option value="ADMIN">ADMIN</option>
+            </select>
+            <input type="submit" value="Enviar">
+        </form>
 
+        <table>
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>nome</th>
+                    <th>Usuário</th>
+                    <th>Ativo</th>
+                    <th>Papel</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Administrador</td>
+                    <td>admin</td>
+                    <td>Sim</td>
+                    <td>ADMIN</td>
+                    <td>
+                        <button type="button">Editar</button>
+                        <button type="button">Excluir</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Ronaldo</td>
+                    <td>ronald@</td>
+                    <td>Sim</td>
+                    <td>USUARIO</td>
+                    <td>
+                        <button type="button">Editar</button>
+                        <button type="button">Excluir</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Pedro</td>
+                    <td>pedro_6780</td>
+                    <td>Não</td>
+                    <td>USUARIO</td>
+                    <td>
+                        <button type="button">Editar</button>
+                        <button type="button">Excluir</button>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="6">Total de Registros: 3</td>
+                </tr>
+            </tfoot>
+        </table>
     </main>
 
     <footer id="footer">
-        
+        <span>SGCM - Sistema de Gerenciamento de Clínica Médica</span>
+        <span>Suporte Técnico: (68) 5555-5555 | E-mail: <a href="mailto:suporte.sgcm@ufac.br">suporte.sgcm@ufac.br</a></span>
     </footer>
 </body>
 </html>
