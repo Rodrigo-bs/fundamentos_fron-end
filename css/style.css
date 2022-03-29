@@ -20,10 +20,167 @@ body {
     font-size: 1.8rem;
 }
 
+#header, #footer {
+    padding: .8rem;
+    color: #fff;
+}
+
 /* HEADER */
 
 #header {
     background: linear-gradient(#003366, #006699);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo * {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0.8rem;
+}
+
+.header-logo img {
+    margin: auto 0;
+}
+
+.header-user_infos *,
+#footer > * {
+    display: block;
+    margin-bottom: .8rem;
+}
+
+/* MAIN */
+
+#content {
+    background: linear-gradient(#cccccc, white);
+    padding: 1.6rem;
+}
+
+/* COMMANDS */
+
+.alert-men {
+    max-width: 700px;
+    padding: 1rem;
+    border: 1px solid currentColor;
+    border-radius: 3px;
+    margin: 0 auto 1rem auto;
+    word-wrap: break-word;
+    position: relative;
+}
+
+.alert-men .icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.alert-men .icon span {
+    background: currentColor;
+    width: 11px;
+    height: 3px;
+    display: block;
+    border-radius: 2px;
+}
+
+.alert-men.error .icon span:first-child {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.alert-men .icon span:first-child {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.alert-men .icon span:last-child {
+    transform: translateY(7px) rotate(-45deg);
+}
+
+.alert-men.error {
+    color: rgb(190, 52, 37);
+    background: rgba(255, 168, 158, 0.9);
+}
+
+.alert-men.success {
+    color: #345337;
+    background: #8bcf92;
+}
+
+#commands {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .8rem .3rem;
+    border-bottom: 1px solid #003366;
+    margin-bottom: 3rem;
+}
+
+/* TABLE */
+
+#content table {
+    width: 100%;
+    border-spacing: .3rem;
+    margin: .8rem 0;
+}
+
+#content table th {
+    background-color: #003366;
+    color: #fff;
+}
+
+#content table th,
+#content table td {
+    padding: .8rem;
+    text-align: center;
+}
+
+#content tbody tr {
+    cursor: pointer;
+}
+
+#content tbody tr td:last-child {
+    width: 1%;
+    white-space: nowrap;
+}
+
+#content tbody tr:nth-child(odd) {
+    background: #c6d4e2;
+}
+
+#content tbody tr:nth-child(even) {
+    background: #dbe1e7;
+}
+
+#content tbody tr:hover {
+    background: #ccc;
+    transition: .2s ease;
+}
+
+#content tbody button {
+    padding: 1rem 2rem;
+    color: #333;
+    font-size: 1.8rem;
+    cursor: pointer;
+    border: none;
+}
+
+#content tbody button.btn-edit {
+    background: #5ea765;
+    color: #f5f5f5;
+}
+
+#content tbody button.btn-delete {
+    background: #E54;
+    color: #f5f5f5;
+}
+
+#content tfoot td {
+    border-top: 1px solid #003366;
+    text-align: center;
 }
 
 /* FOOTER */

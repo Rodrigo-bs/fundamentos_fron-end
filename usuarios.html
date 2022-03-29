@@ -8,6 +8,7 @@
 <body>
     <header id="header">
         <div class="header-logo">
+            <img src="./img/logo.png" alt="Logo SGCM">
             <span>SGCM</span>
         </div>
 
@@ -33,11 +34,22 @@
     </nav>
 
     <main id="content">
-        <div>
+        <div class="error alert-men">
             ERRO!
+
+            <div class="icon">
+                <span></span>
+                <span></span>
+            </div>
         </div>
-        <div>
+
+        <div class="success alert-men">
             SUCESSO!
+
+            <div class="icon">
+                <span></span>
+                <span></span>
+            </div>
         </div>
         <form action="#" method="get">
             <input type="hidden" name="id" value="1">
@@ -60,14 +72,16 @@
 
         <div id="commands">
             <button type="button">Adcionar</button>
-            <label for="search">Buscar</label>
-            <input type="text" name="buscar" id="search" placeholder="Pesquisar...">
+            <div class="search-box">
+                <label for="search">Buscar</label>
+                <input type="text" name="buscar" id="search" placeholder="Pesquisar...">
+            </div>
         </div>
 
         <table>
             <thead>
                 <tr>
-                    <th>id</th>
+                    <th>ID</th>
                     <th>nome</th>
                     <th>Usuário</th>
                     <th>Ativo</th>
@@ -83,8 +97,8 @@
                     <td>Sim</td>
                     <td>ADMIN</td>
                     <td>
-                        <button type="button">Editar</button>
-                        <button type="button">Excluir</button>
+                        <button type="button" class="btn-edit">Editar</button>
+                        <button type="button" class="btn-delete">Excluir</button>
                     </td>
                 </tr>
                 <tr>
@@ -94,8 +108,8 @@
                     <td>Sim</td>
                     <td>USUARIO</td>
                     <td>
-                        <button type="button">Editar</button>
-                        <button type="button">Excluir</button>
+                        <button type="button" class="btn-edit">Editar</button>
+                        <button type="button" class="btn-delete">Excluir</button>
                     </td>
                 </tr>
                 <tr>
@@ -105,8 +119,8 @@
                     <td>Não</td>
                     <td>USUARIO</td>
                     <td>
-                        <button type="button">Editar</button>
-                        <button type="button">Excluir</button>
+                        <button type="button" class="btn-edit">Editar</button>
+                        <button type="button" class="btn-delete">Excluir</button>
                     </td>
                 </tr>
             </tbody>
