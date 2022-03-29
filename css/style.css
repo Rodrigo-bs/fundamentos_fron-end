@@ -60,13 +60,17 @@ body {
 /* COMMANDS */
 
 .alert-men {
-    max-width: 700px;
+    max-width: 900px;
     padding: 1rem;
     border: 1px solid currentColor;
     border-radius: 3px;
     margin: 0 auto 1rem auto;
     word-wrap: break-word;
-    position: relative;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    opacity: .9;
 }
 
 .alert-men .icon {
@@ -88,10 +92,6 @@ body {
     border-radius: 2px;
 }
 
-.alert-men.error .icon span:first-child {
-    transform: translateY(9px) rotate(45deg);
-}
-
 .alert-men .icon span:first-child {
     transform: translateY(10px) rotate(45deg);
 }
@@ -102,7 +102,7 @@ body {
 
 .alert-men.error {
     color: rgb(190, 52, 37);
-    background: rgba(255, 168, 158, 0.9);
+    background: #ffa89e;
 }
 
 .alert-men.success {
