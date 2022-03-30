@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SGCM</title>
 </head> 
 <body>
@@ -27,9 +28,15 @@
             <li><a href="pacientes.html">Pacientes</a></li>
             <li><a href="profissionais.html">Profissionais</a></li>
             <li><a href="convenios.html">Convênios</a></li>
-            <li><a href="unidades.html">Unidades</a></li>
-            <li><a href="especialidades.html">Especialidades</a></li>
-            <li><a href="usuarios.html">Usuários</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)">Configurações <span class="icon">&#9660;</span></a>
+
+                <ul class="dropdown-content">
+                    <li><a href="unidades.html">Unidades</a></li>
+                    <li><a href="especialidades.html">Especialidades</a></li>
+                    <li><a href="usuarios.html">Usuários</a></li>
+                </ul>
+            </li>
         </ul>
     </nav>
 
@@ -43,31 +50,40 @@
             </div>
         </div>
 
-        <!-- <div class="success alert-men">
+        <div class="success alert-men">
             SUCESSO!
 
             <div class="icon">
                 <span></span>
                 <span></span>
             </div>
-        </div> -->
-        <form action="#" method="get">
-            <input type="hidden" name="id" value="1">
-            <label for="usuario_nomeCompleto">Nome</label>
-            <input type="text" name="usuario.nome_completo" id="usuario_nomecompleto" placeholder="Nome Completo">
-            <label for="usuario_nomeUsuario">Usuário</label>
-            <input type="text" name="usuario.nome_usuario" id="usuario_nomeUsuario" placeholder="Usuário" required>
-            <label for="usuario_senha">Senha</label>
-            <input type="password" name="usuario.senha" id="usuario_senha" placeholder="********">
-            <label for="usuario_ativo">Ativo</label>
-            <input type="checkbox" name="usuario.ativo" id="usuario_ativo">
-            <label for="usuario_papel">Papel</label>
-            <select name="usuario.papel" id="usuario_papel" required>
-                <option value="" disabled selected>Selecione uma opção</option>
-                <option value="USUARIO">USUARIO</option>
-                <option value="ADMIN">ADMIN</option>
-            </select>
+        </div>
+        <form action="#" method="get" class="form-container">
+            <input type="hidden" name="id" value="1" hidden>
+
+            <div class="grid">
+                <label for="usuario_nomeCompleto">Nome</label>
+                <input type="text" name="usuario.nome_completo" id="usuario_nomecompleto" placeholder="Nome Completo">
+                
+                <label for="usuario_nomeUsuario">Usuário</label>
+                <input type="text" name="usuario.nome_usuario" id="usuario_nomeUsuario" placeholder="Usuário" required>
+                
+                <label for="usuario_senha">Senha</label>
+                <input type="password" name="usuario.senha" id="usuario_senha" placeholder="********">
+            
+                <label for="usuario_ativo">Ativo</label>
+                <input type="checkbox" name="usuario.ativo" id="usuario_ativo">
+    
+                <label for="usuario_papel">Papel</label>
+                <select name="usuario.papel" id="usuario_papel" required>
+                    <option value="" disabled selected>Selecione uma opção</option>
+                    <option value="USUARIO">USUARIO</option>
+                    <option value="ADMIN">ADMIN</option>
+                </select>
+            </div>
+
             <input type="submit" value="Enviar">
+            <input type="button" value="Cancelar">
         </form>
 
         <div id="commands">
@@ -91,7 +107,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
+                    <td class="fit">1</td>
                     <td>Administrador</td>
                     <td>admin</td>
                     <td>Sim</td>
@@ -102,7 +118,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>2</td>
+                    <td class="fit">2</td>
                     <td>Ronaldo</td>
                     <td>ronald@</td>
                     <td>Sim</td>
@@ -113,7 +129,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>3</td>
+                    <td class="fit">3</td>
                     <td>Pedro</td>
                     <td>pedro_6780</td>
                     <td>Não</td>
