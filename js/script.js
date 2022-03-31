@@ -59,12 +59,61 @@ class GetUsers {
         this.url = 'https://raw.githubusercontent.com/danielnsilva/webacademyufac/main/usuarios.json';
     }
 
+    insertInToTable(datas) {
+        datas.forEach(data => {
+            console.log(this.createElement(data));
+        });
+    }
+
+    createElement(data) {
+        let row = document.createElement('tr');
+        row.setAttribute('data-tr-id', data.id);
+
+        let idColumn = document.createElement('td');
+        idColumn.innerText = data.id
+        idColumn.classList.add('fit');
+
+        
+        let nameColumn = document.createElement('td');
+        nameColumn.innerText = data.nomeCompleto;
+        let userColumn = document.createElement('td');
+        userColumn.innerText = data.nomeUsuario;
+        let activeColumn = document.createElement('td');
+        activeColumn.innerText = data.ativo;
+        let chargeColumn = document.createElement('td');
+        chargeColumn.innerText = data.papel;
+
+        let containerButton = document.createElement('td');
+        
+        let buttonEdit = document.createElement('button');
+        buttonEdit.innerText = 'Editar';
+        buttonEdit.classList.add('btn-edit');
+
+        let buttonDelete = document.createElement('button');
+        buttonDelete.innerText = 'Excluir';
+        buttonDelete.setAttribute('data-table', 'button_delete');
+        buttonDelete.setAttribute('data-table-id',  data.id);
+        buttonDelete.classList.add('btn-delete');
+
+        containerButton.appendChild(buttonEdit);
+        containerButton.appendChild(buttonDelete);
+
+        row.appendChild(idColumn);
+        row.appendChild(nameColumn);
+        row.appendChild(userColumn);
+        row.appendChild(activeColumn);
+        row.appendChild(chargeColumn);
+        row.appendChild(containerButton);
+
+        return row;
+    }
+
     makeAjax() {
         const xhr = new XMLHttpRequest();
         xhr.open('GET', this.url);
         xhr.addEventListener('readystatechange', () => {
             if (xhr.readyState == 4 && xhr.status == 200) {
-                console.log(xhr.responseText);
+                this.insertInToTable(JSON.parse(xhr.responseText));
             }
         });
         
