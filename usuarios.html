@@ -14,7 +14,7 @@
         </div>
 
 
-        <div class="">
+        <div class="header-user_infos">
             <span>Usuário: Administrador (admin)</span>
             <span>Papel: ADMIN</span>
             <button type="button">Logout</button>
@@ -94,7 +94,7 @@
             </div>
         </div>
 
-        <table>
+        <table data-table="table">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -106,7 +106,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <tr data-tr-id="1">
                     <td class="fit">1</td>
                     <td>Administrador</td>
                     <td>admin</td>
@@ -114,10 +114,10 @@
                     <td>ADMIN</td>
                     <td>
                         <button type="button" class="btn-edit">Editar</button>
-                        <button type="button" class="btn-delete">Excluir</button>
+                        <button type="button" class="btn-delete" data-table="button_delete" data-table-id="1">Excluir</button>
                     </td>
                 </tr>
-                <tr>
+                <tr data-tr-id="2">
                     <td class="fit">2</td>
                     <td>Ronaldo</td>
                     <td>ronald@</td>
@@ -125,10 +125,10 @@
                     <td>USUARIO</td>
                     <td>
                         <button type="button" class="btn-edit">Editar</button>
-                        <button type="button" class="btn-delete">Excluir</button>
+                        <button type="button" class="btn-delete" data-table="button_delete" data-table-id="2">Excluir</button>
                     </td>
                 </tr>
-                <tr>
+                <tr data-tr-id="3">
                     <td class="fit">3</td>
                     <td>Pedro</td>
                     <td>pedro_6780</td>
@@ -136,7 +136,7 @@
                     <td>USUARIO</td>
                     <td>
                         <button type="button" class="btn-edit">Editar</button>
-                        <button type="button" class="btn-delete">Excluir</button>
+                        <button type="button" class="btn-delete" data-table="button_delete" data-table-id="3">Excluir</button>
                     </td>
                 </tr>
             </tbody>
@@ -152,5 +152,7 @@
         <span>SGCM - Sistema de Gerenciamento de Clínica Médica</span>
         <span>Suporte Técnico: (68) 5555-5555 | E-mail: <a href="mailto:suporte.sgcm@ufac.br">suporte.sgcm@ufac.br</a></span>
     </footer>
+
+    <script src="./js/script.js"></script>
 </body>
 </html>
